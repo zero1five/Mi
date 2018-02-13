@@ -63,6 +63,10 @@ width: 63%;
                 font-size: 22px;
                 color: #fff;
                 text-align: center;
+
+                i {
+                    font-size: 31px;
+                }
             }
             &:hover {
                 color: #ff6700;
