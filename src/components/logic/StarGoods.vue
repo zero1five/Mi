@@ -3,8 +3,8 @@
       <h2>小米明星单品</h2>
       <div class="goods">
           <ul>
-              <router-link tag="li" class="rainbow" v-for="item in goodsData" to="/item" :key="item.goods_id">
-                  <img :src="item.goods_pic">
+              <li class="rainbow" v-for="item in goodsData">
+                  <router-link tag="img" :src="item.goods_pic" to="/item"></router-link>
                   <p class="goods-title">{{item.goods_title}}</p>
                   <p class="goods-desc">{{item.goods_desc}}</p>
                   <p class="goods-price">{{item.goods_price}}元</p>
@@ -13,8 +13,8 @@
                     @click="addGoods(item),openHTML(item.goods_title)
                     showClose = true
                     "><p>加入购物车</p>
-                  </div>
-              </router-link>                                                            
+                  </div>                  
+              </li>                                                         
           </ul>
       </div>
   </div>
