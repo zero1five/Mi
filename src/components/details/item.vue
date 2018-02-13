@@ -17,6 +17,14 @@
         </div>
       </div>
     </div>
+    <div class="details-content">
+      <div class="details-img">
+        
+      </div>
+      <div class="details-text">
+        
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -35,13 +43,25 @@
         .nav-bar-container {
           width: 63%;
           margin: 0 auto;
+          zoom: 1;
+          position: relative;
+          &:after {
+            clear:both;
+            content:'.';
+            display:block;
+            width: 0;
+            height: 0;
+            visibility:hidden;
 
+          }
           .left-bar {
             height: 63px;
             line-height: 63px;
             color: #212121;
             font-size: 18px;
-            float: left;
+            position: absolute;
+            left: 0;
+            
 
             span {
               font-size: 13px;
@@ -65,8 +85,12 @@
               &:nth-child(6) {
                 border: none;
               }
+              &:hover {
+                color: #ff6700;
+              }
             }
           }
         }
     }
+
 </style>

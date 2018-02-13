@@ -146,16 +146,6 @@
             }
         }
     }
-    @media (max-width: 1200px) {
-        .site-header,.star-goods {
-            width: 90%!important;
-        }
-        .sub-row {
-            img {
-                width: 210px!important;
-            }
-        }
-    }
     #slideshow img{
         width: 100%;
         height: 100%;

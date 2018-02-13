@@ -24,4 +24,15 @@ export default {
 #app {
   font-family: 'Helvetica', Avenir, Helvetica, Arial, sans-serif;
 }
+@media (max-width: 1200px) {
+    .site-header,.star-goods,.nav-bar-container {
+        width: 90%!important;
+    }
+    .sub-row {
+        img {
+            width: 210px!important;
+        }
+    }
+    
+}
 </style>
