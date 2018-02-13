@@ -4,7 +4,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import Home from '@/components/logic/home'  // 默认页面
-import Item from '@/components/details/item'  // 商品详情页
+
+// 商品详情页
+
+let Item = (resolve) => {
+  return import('@/components/details/item')
+}
 
 let router = new VueRouter({
     mode: 'history',
