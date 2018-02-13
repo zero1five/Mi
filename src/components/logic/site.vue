@@ -2,7 +2,7 @@
 <div class="site">
     <div class="container">
         <ul>
-            <li><i class="iconfont icon-xiaomi MI"></i></li>
+            <router-link tag="li" to="/"><i class="iconfont icon-xiaomi MI"></i></router-link>
             <li><img src="http://zero1five.gitee.io/pic/Mi/img/1.gif"></li>
             <li>小米手机</li>
             <li>红米</li>
