@@ -25,7 +25,7 @@ export default {
   font-family: 'Helvetica', Avenir, Helvetica, Arial, sans-serif;
 }
 @media (max-width: 1200px) {
-    .site-header,.star-goods,.nav-bar-container {
+    .site-header,.star-goods,.nav-bar-container,.details-content {
         width: 90%!important;
     }
     .sub-row {

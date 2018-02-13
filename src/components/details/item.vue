@@ -19,18 +19,41 @@
     </div>
     <div class="details-content">
       <div class="details-img">
-        
+        <div class="block">
+          <el-carousel trigger="click" height="560px" interval="3500">
+            <el-carousel-item v-for="item in imgs" :key="item">
+              <img :src="item" >
+            </el-carousel-item>
+          </el-carousel>
+        </div>
       </div>
       <div class="details-text">
+        <h2>小米MIX 2 全面屏2.0</h2>
+        <small>『 8+ 128GB直降400元，6+128GB直降200元，6+64GB直降300元 』 <span>全面屏2.0，5.99"大屏 / 晓龙835旗舰处理器 / 4轴光学防抖 / 6模43频，全球频段</span></small>
+        <p class="price">2999元</p>
         
       </div>
     </div>
   </div>
 </template>
 <script>
-    export default {}
+
+    export default {
+      data () {
+        return {
+          imgs: [
+                  'http://zero1five.gitee.io/pic/Mi/img/15.jpg',
+                  'http://zero1five.gitee.io/pic/Mi/img/16.jpg',
+                  'http://zero1five.gitee.io/pic/Mi/img/17.jpg',
+                ]
+        }
+      },
+    }
 </script>
 <style lang="less">
+    .el-carousel__button {
+      background: #616161;
+    }
     .nav-bar {
       color: #616161;
       height: 63px;
@@ -92,5 +115,47 @@
           }
         }
     }
+    .details-content {
+      width: 63%;
+      margin: 0 auto;
+      zoom: 1;
+      position: relative;
+      padding-top: 32px;
+      &:after {
+        clear:both;
+        content:'.';
+        display:block;
+        width: 0;
+        height: 0;
+        visibility:hidden;
+      }
 
+      .details-img {
+        width: 560px;
+        height: 560px;
+        float: left;
+      }
+      .details-text {
+        padding-left: 20px;
+        h2 {
+          font-size: 21px;
+          color: #212121;
+          padding-bottom: 5px;
+        }
+        small {
+          color: #ff4a00;
+          font-size: 13px;
+          padding-bottom: 5px;
+          span {
+            color: #b7b0b7;
+          }
+        }
+        .price {
+          padding: 15px 0;
+          font-size: 17px;
+          color: #ff6700;
+          font-weight: 300;
+        }
+      }
+    }
 </style>
