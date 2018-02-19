@@ -4,7 +4,7 @@
       <div class="goods">
           <ul>
               <li class="rainbow" v-for="item in goodsData">
-                  <router-link tag="img" :src="item.goods_pic" to="/item"></router-link>
+                  <router-link tag="img" v-lazy="item.goods_pic" to="/item"></router-link>
                   <p class="goods-title">{{item.goods_title}}</p>
                   <p class="goods-desc">{{item.goods_desc}}</p>
                   <p class="goods-price">{{item.goods_price}}元</p>

@@ -37,15 +37,29 @@
               <div><i class="iconfont icon-chaijiufei"></i><p>以旧换新</p></div>
               <div><i class="iconfont icon-shenghuohuafeichongzhi"></i><p>话费充值</p></div>
           </div>
-          <img src="http://zero1five.gitee.io/pic/Mi/img/4.jpg" alt="">
-          <img src="http://zero1five.gitee.io/pic/Mi/img/5.jpg" alt="">
-          <img src="http://zero1five.gitee.io/pic/Mi/img/6.jpg" alt="">
+          <img v-lazy="img2[0]" alt="">
+          <img v-lazy="img2[1]" alt="">
+          <img v-lazy="img2[2]" alt="">
       </div>
   </div>
 </template>
 <script>
     export default {
-
+        data () {
+            return {
+                img1: [
+                    'http://zero1five.gitee.io/pic/Mi/img/3.jpg',
+                    'http://zero1five.gitee.io/pic/Mi/img/7.jpg',
+                    'http://zero1five.gitee.io/pic/Mi/img/8.jpg',
+                    'http://zero1five.gitee.io/pic/Mi/img/9.jpg'
+                ],
+                img2: [
+                    'http://zero1five.gitee.io/pic/Mi/img/4.jpg',
+                    'http://zero1five.gitee.io/pic/Mi/img/5.jpg',
+                    'http://zero1five.gitee.io/pic/Mi/img/6.jpg'
+                ]                
+            }
+        }
     }
 </script>
 <style lang="less">

@@ -6,10 +6,13 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from '@/router'
+import VueLazyLoad from 'vue-lazyload'
 
 Vue.config.productionTip = false
 
-
+Vue.use(VueLazyLoad, {
+  loading: '../static/1.gif'
+})
 Vue.use(ElementUI)
 
 /* 引入 .js */

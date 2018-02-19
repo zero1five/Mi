@@ -22,7 +22,7 @@
         <div class="block">
           <el-carousel trigger="click" height="560px" interval="3500">
             <el-carousel-item v-for="item in imgs" :key="item">
-              <img :src="item" >
+              <img v-lazy="item">
             </el-carousel-item>
           </el-carousel>
         </div>
