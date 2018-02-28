@@ -6,13 +6,17 @@
 				<div class="gallery">
 					<div class="thumbnail">
 						<ul>
-							<li :class="{'on':index==0}" key="index" v-for="(img,index) in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_54/quality,Q_90/format,webp'"></li>
+							<li :class="{'on':index==imgIndex}" @click="tableImg(index)" :key="index" v-for="(img,index) in itemsInfo.ali_images">
+                <img :src="img+'?x-oss-process=image/resize,w_54/quality,Q_90/format,webp'">
+              </li>
 						</ul>
 					</div>
 					<div class="thumb">
 						<ul>
-							<li :class="{'on':index==0}" key="index" v-for="(img,index) in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_440/quality,Q_90/format,webp'"></li>
-						</ul>
+							<li :class="{'on':index==imgIndex}" :key="index" v-for="(img,index) in itemsInfo.ali_images">
+                <img :src="img+'?x-oss-process=image/resize,w_440/quality,Q_90/format,webp'">
+              </li>
+						</ul><!-- 展示大图通过 on class 来显示 -->
 					</div>
 				</div>
 			</div>
@@ -62,11 +66,13 @@
 <script>
 import itemsData from '@/lib/newItemsData.js'
 import prompt from '@/components/prompt'
+import index from 'vue';
 export default {
   data () {
     return {
       itemsList: itemsData,
-      count: 1
+      count: 1,
+      imgIndex: 0,
     }
   },
   computed: {
@@ -108,6 +114,9 @@ export default {
     addCarPanelHandle () {
       let data = [this.itemsInfo,this.count]
       this.$store.commit('addCarPanelData',data)
+    },
+    tableImg (index) {
+      this.imgIndex = index;
     }
   },
   components: {
@@ -311,7 +320,6 @@ item-box img{
 .item-box .item-num .down, .item-box .item-num .up{
 	position: relative;
     float: left;
-    display: inline-block;
     width: 36px;
     height: 36px;
     line-height: 40px;
@@ -336,7 +344,6 @@ item-box img{
 	position: relative;
     overflow: hidden;
     float: left;
-    display: inline-block;
     width: 56px;
     height: 18px;
     margin: 7px 0 0;
@@ -374,8 +381,7 @@ item-box img{
     padding: 30px 0 0 10px;
 }
 .item-box .blue-title-btn{
-	float: left;
-    display: inline-block;
+	 float: left;
     width: 143px;
     height: 48px;
     line-height: 48px;
