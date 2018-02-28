@@ -25,6 +25,10 @@ export default new Router({
   },
   routes: [
     {
+      path: '*',
+      component: Shop,
+    },
+    {
       path: '/',
       name: 'Shop',
       component: Shop
