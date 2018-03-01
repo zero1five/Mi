@@ -1,7 +1,7 @@
-# xiaomi
+# Smartisan-mall
 
-> Millet mall
-
+> Smartisan-mall
+<a href="http://zero1five.gitee.io/lazyman/Mall/" target="_blank"></a>
 ## Build Setup
 
 ``` bash
