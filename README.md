@@ -1,7 +1,9 @@
 # Smartisan-mall
 
 > Smartisan-mall
-<a href="http://zero1five.gitee.io/lazyman/Mall/" target="_blank"></a>
+
+[Demo](http://zero1five.gitee.io/lazyman/Mall/)
+
 ## Build Setup
 
 ``` bash
